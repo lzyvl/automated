@@ -1,41 +1,26 @@
-// Smooth scroll for buttons/links
-
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-    link.addEventListener("click", function(e){
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if(target){
-
-            e.preventDefault();
-
-            target.scrollIntoView({
-                behavior:"smooth"
-            });
-
-        }
-
-    });
-
-});
+// ================================
+// SCROLL REVEAL ANIMATIONS
+// ================================
 
 
+const revealElements = document.querySelectorAll(".reveal");
 
-
-// Fade-in animations on scroll
 
 const observer = new IntersectionObserver((entries)=>{
 
+
     entries.forEach(entry=>{
+
 
         if(entry.isIntersecting){
 
-            entry.target.classList.add("show");
+            entry.target.classList.add("active");
 
         }
 
+
     });
+
 
 },{
     threshold:0.15
@@ -43,12 +28,9 @@ const observer = new IntersectionObserver((entries)=>{
 
 
 
-document.querySelectorAll("section, .service-card, .price-card, .cards div, .faq-item")
-.forEach(element=>{
+revealElements.forEach(el=>{
 
-    element.classList.add("hidden");
-
-    observer.observe(element);
+    observer.observe(el);
 
 });
 
@@ -56,44 +38,94 @@ document.querySelectorAll("section, .service-card, .price-card, .cards div, .faq
 
 
 
-// FAQ accordion
-
-const faqItems = document.querySelectorAll(".faq-item");
 
 
-faqItems.forEach(item=>{
-
-    const question = item.querySelector("h3");
-    const answer = item.querySelector("p");
-
-
-    answer.style.display="none";
+// ================================
+// AI CHAT TYPING EFFECT
+// ================================
 
 
-    question.style.cursor="pointer";
+const aiMessage = document.querySelector(".ai");
 
 
-    question.addEventListener("click",()=>{
+const aiText = 
+`AI Assistant:
+\n"Absolutely. I have 10:30 AM available.
+Would you like me to reserve it?"`;
 
 
-        if(answer.style.display==="none"){
 
-            answer.style.display="block";
-
-            question.innerHTML = "▲ " + question.innerHTML.replace("▼ ","");
-
-        }
-
-        else {
-
-            answer.style.display="none";
-
-            question.innerHTML = "▼ " + question.innerHTML.replace("▲ ","");
-
-        }
+if(aiMessage){
 
 
-    });
+let index = 0;
+
+
+aiMessage.innerHTML="";
+
+
+function typeAI(){
+
+
+    if(index < aiText.length){
+
+
+        aiMessage.innerHTML += aiText.charAt(index);
+
+
+        index++;
+
+
+        setTimeout(typeAI,35);
+
+
+    }
+
+
+}
+
+
+setTimeout(typeAI,1500);
+
+
+}
+
+
+
+
+
+
+
+
+// ================================
+// FLOATING MOUSE EFFECT
+// ================================
+
+
+const windowBox = document.querySelector(".ai-window");
+
+
+document.addEventListener("mousemove",(e)=>{
+
+
+if(windowBox){
+
+
+const x = (window.innerWidth/2 - e.clientX)/50;
+
+const y = (window.innerHeight/2 - e.clientY)/50;
+
+
+
+windowBox.style.transform =
+`
+rotateY(${x}deg)
+rotateX(${y}deg)
+`;
+
+
+
+}
 
 
 });
@@ -102,92 +134,341 @@ faqItems.forEach(item=>{
 
 
 
-// Fake dashboard live activity animation
-
-const dashboardCards = document.querySelectorAll(".dash-card");
 
 
-const updates = [
 
-"📞 New customer enquiry received",
+// ================================
+// NUMBER COUNTER ANIMATION
+// ================================
 
-"🤖 AI follow-up sent automatically",
 
-"📅 Appointment booked",
+const counters = document.querySelectorAll(".counter");
 
-"⭐ New 5-star review received"
+
+counters.forEach(counter=>{
+
+
+let started=false;
+
+
+
+const countObserver = new IntersectionObserver(entries=>{
+
+
+entries.forEach(entry=>{
+
+
+if(entry.isIntersecting && !started){
+
+
+started=true;
+
+
+let text = counter.innerText;
+
+
+
+if(text.includes("%")){
+
+
+let num=0;
+
+
+let target=parseInt(text);
+
+
+let interval=setInterval(()=>{
+
+
+num++;
+
+
+counter.innerText=num+"%";
+
+
+if(num>=target){
+
+clearInterval(interval);
+
+}
+
+
+},25);
+
+
+
+}
+
+
+
+
+
+else if(text.includes("+")){
+
+
+let num=0;
+
+let target=parseInt(text);
+
+
+
+let interval=setInterval(()=>{
+
+
+num++;
+
+
+counter.innerText=num+"+";
+
+
+if(num>=target){
+
+clearInterval(interval);
+
+}
+
+
+},70);
+
+
+}
+
+
+
+}
+
+
+});
+
+
+});
+
+
+
+countObserver.observe(counter);
+
+
+
+});
+
+
+
+
+
+
+
+
+// ================================
+// MAGNETIC BUTTONS
+// ================================
+
+
+const buttons = document.querySelectorAll(
+".primary-btn, .secondary-btn, .nav-button, form button"
+);
+
+
+
+buttons.forEach(button=>{
+
+
+button.addEventListener("mousemove",(e)=>{
+
+
+const rect = button.getBoundingClientRect();
+
+
+const x = e.clientX - rect.left - rect.width/2;
+
+const y = e.clientY - rect.top - rect.height/2;
+
+
+
+button.style.transform =
+`translate(${x/8}px,${y/8}px)`;
+
+
+});
+
+
+
+button.addEventListener("mouseleave",()=>{
+
+
+button.style.transform="translate(0,0)";
+
+
+});
+
+
+});
+
+
+
+
+
+
+
+
+// ================================
+// AI DASHBOARD LIVE UPDATES
+// ================================
+
+
+const successBox=document.querySelector(".success");
+
+
+
+const updates=[
+
+"✓ Appointment booked automatically",
+
+"✓ Customer information captured",
+
+"✓ Follow-up message sent",
+
+"✓ Lead converted successfully"
 
 ];
+
 
 
 let updateIndex=0;
 
 
 
+if(successBox){
+
+
 setInterval(()=>{
 
 
-    if(dashboardCards.length){
+successBox.style.opacity=0;
 
-        dashboardCards[0].innerHTML = 
-        updates[updateIndex] +
-        "<br><span>Just now</span>";
 
-        updateIndex++;
 
-        if(updateIndex >= updates.length){
+setTimeout(()=>{
 
-            updateIndex=0;
 
-        }
+successBox.innerText=
+updates[updateIndex];
 
-    }
+
+
+successBox.style.opacity=1;
+
+
+
+updateIndex++;
+
+
+if(updateIndex>=updates.length){
+
+updateIndex=0;
+
+}
+
+
+
+},500);
+
 
 
 },3000);
 
 
 
+}
 
 
-// Simple enquiry form handling
-
-const form = document.querySelector("form");
 
 
-if(form){
-
-form.addEventListener("submit",(e)=>{
 
 
-    e.preventDefault();
 
 
-    const button = form.querySelector("button");
+// ================================
+// SMOOTH NAVIGATION
+// ================================
 
 
-    button.innerHTML="Sending...";
+document.querySelectorAll('a[href^="#"]')
+.forEach(link=>{
 
 
-    setTimeout(()=>{
+link.addEventListener("click",function(e){
 
 
-        button.innerHTML="✓ Enquiry Received";
+const target=document.querySelector(
+this.getAttribute("href")
+);
 
 
-        form.reset();
+
+if(target){
 
 
-        alert(
-        "Thanks! We will contact you shortly."
-        );
+e.preventDefault();
 
 
-    },1500);
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+
+}
 
 
 
 });
 
+
+});
+
+
+
+
+
+
+
+
+// ================================
+// CONTACT FORM SUCCESS
+// ================================
+
+
+const form=document.querySelector("form");
+
+
+
+if(form){
+
+
+form.addEventListener("submit",()=>{
+
+
+const button=form.querySelector("button");
+
+
+
+button.innerHTML=
+"Sending enquiry...";
+
+
+
+setTimeout(()=>{
+
+
+button.innerHTML=
+"✓ Request Received";
+
+
+},1500);
+
+
+
+});
 
 }
