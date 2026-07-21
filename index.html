@@ -8,9 +8,9 @@
 
 <title>VANTA — Websites Built For Growth</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
@@ -18,55 +18,53 @@
 <body>
 
 
-<div class="hero">
-
-
-<div class="bg-line line1"></div>
-<div class="bg-line line2"></div>
-
+<!-- NAVBAR -->
 
 <nav>
 
 <div class="logo">
-V<span>ANTA</span>
+VANTA
 </div>
 
 
-<ul class="links">
+<ul>
 
-<li><a href="#">Work</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">Process</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="#services">Services</a></li>
+
+<li><a href="#work">Work</a></li>
+
+<li><a href="#reviews">Reviews</a></li>
+
+<li><a href="#contact">Contact</a></li>
 
 </ul>
-
-
-<button class="nav-btn">
-Start Project
-</button>
-
 
 </nav>
 
 
 
-<section class="container">
 
 
-<div>
+<!-- HERO -->
+
+
+<section class="hero">
+
+
+<div class="hero-content fade">
 
 
 <h1>
-Websites<br>
-Built For<br>
-<span>Growth.</span>
+Websites
+<br>
+<span>Built For Growth.</span>
 </h1>
 
 
-<p class="description">
+<p>
 
-We design and develop premium custom websites that help ambitious businesses build trust, attract customers and grow online.
+Premium websites designed to turn visitors into customers.
+VANTA creates high-performance digital experiences for modern businesses.
 
 </p>
 
@@ -74,14 +72,15 @@ We design and develop premium custom websites that help ambitious businesses bui
 
 <div class="buttons">
 
-<button class="primary">
-Start Project →
-</button>
+
+<a class="btn primary" href="#contact">
+Start Project
+</a>
 
 
-<button class="secondary">
+<a class="btn" href="#work">
 View Work
-</button>
+</a>
 
 
 </div>
@@ -90,167 +89,125 @@ View Work
 </div>
 
 
-
-
-<div class="preview">
-
-
-<div class="browser-top">
-
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-
-</div>
-
-
-<div class="screen">
-
-
-<div class="tag">
-Premium Website
-</div>
-
-
-<div class="mock-title"></div>
-
-<div class="mock-line"></div>
-
-<div class="mock-line"></div>
-
-
-<div class="mock-card"></div>
-
-
-</div>
-
-
-</div>
-
+<div class="hero-shape"></div>
 
 
 </section>
 
 
-<div class="scroll">
-
-SCROLL
-
-<span>↓</span>
-
-</div>
-
-
-</div>
 
 
 
 
+<!-- SERVICES -->
 
 
-
-<section class="about">
-
-
-<div class="energy-line"></div>
+<section id="services">
 
 
-<div class="about-content">
-
-
-<div class="about-label">
-ABOUT VANTA
-</div>
-
-
-<h2>
-
-We don't build templates.
-
-<br>
-
-We build <span>digital experiences.</span>
-
+<h2 class="section-title fade">
+What We Do
 </h2>
 
 
 
-<p>
-
-VANTA creates premium custom websites for businesses that want to stand out online. Every website is designed from the ground up with modern interfaces, smooth interactions and performance that turns visitors into customers.
-
-</p>
+<div class="cards">
 
 
 
-<div class="stats">
-
-
-<div>
-
-<h3>100%</h3>
-
-<p>Custom Designed</p>
-
-</div>
-
-
-<div>
-
-<h3>Fast</h3>
-
-<p>Optimised Performance</p>
-
-</div>
-
-
-<div>
-
-<h3>24/7</h3>
-
-<p>Support Available</p>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<div class="about-card">
-
-
-<div class="card-top">
-
-VANTA SYSTEM
-
-</div>
-
-
-<div class="system-line"></div>
-
-<div class="system-line"></div>
-
-<div class="system-line short"></div>
-
-
-
-<div class="system-box">
+<div class="card fade">
 
 <h3>
-Modern Websites
+Premium Websites
 </h3>
 
-
 <p>
-Designed around your brand, customers and goals.
+High converting websites built around your brand, customers and goals.
 </p>
 
+</div>
+
+
+
+<div class="card fade">
+
+<h3>
+Website Management
+</h3>
+
+<p>
+Hosting, updates, improvements and support handled for you.
+</p>
+
+</div>
+
+
+
+
+<div class="card fade">
+
+<h3>
+Growth Design
+</h3>
+
+<p>
+Conversion focused layouts designed to increase enquiries and sales.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- PORTFOLIO -->
+
+
+<section id="work">
+
+
+<h2 class="section-title fade">
+Selected Work
+</h2>
+
+
+
+<div class="portfolio">
+
+
+<div class="project fade">
+
+<div class="mock">
+Vape Store
+</div>
+
+</div>
+
+
+
+<div class="project fade">
+
+<div class="mock">
+Beauty Brand
+</div>
+
+</div>
+
+
+
+<div class="project fade">
+
+<div class="mock">
+Local Business
+</div>
 
 </div>
 
@@ -265,7 +222,127 @@ Designed around your brand, customers and goals.
 
 
 
-<script src="js/script.js"></script>
+
+
+
+
+<!-- REVIEWS -->
+
+
+<section id="reviews">
+
+
+<h2 class="section-title fade">
+Client Results
+</h2>
+
+
+
+<div class="cards">
+
+
+<div class="card fade">
+
+<p>
+"VANTA completely transformed our online presence."
+</p>
+
+<h4>
+★★★★★
+</h4>
+
+</div>
+
+
+
+<div class="card fade">
+
+<p>
+"Professional, fast and actually helped us get more enquiries."
+</p>
+
+<h4>
+★★★★★
+</h4>
+
+</div>
+
+
+
+<div class="card fade">
+
+<p>
+"The website looks like it belongs to a much bigger company."
+</p>
+
+<h4>
+★★★★★
+</h4>
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- CONTACT -->
+
+
+<section id="contact">
+
+
+<div class="contact-box fade">
+
+
+<h2>
+Ready To Grow?
+</h2>
+
+
+<p>
+Let's build a website that makes your business stand out.
+</p>
+
+
+<a class="btn primary">
+Contact VANTA
+</a>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+© 2026 VANTA. All rights reserved.
+
+</footer>
+
+
+
+
+
+<script src="script.js"></script>
 
 
 </body>
