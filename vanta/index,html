@@ -9,8 +9,11 @@
 
 
 <title>
-VANTA — Premium Websites For Local Businesses
+VANTA | Premium Websites For Local Businesses
 </title>
+
+
+<meta name="description" content="VANTA builds premium websites for local UK businesses. Website design, hosting and maintenance handled for one simple subscription.">
 
 
 <link rel="stylesheet" href="style.css">
@@ -22,9 +25,7 @@ VANTA — Premium Websites For Local Businesses
 </head>
 
 
-
 <body>
-
 
 
 <!-- NAVBAR -->
@@ -45,13 +46,21 @@ VANTA
 Services
 </a>
 
+
 <a href="#demos">
 Demos
 </a>
 
+
 <a href="#pricing">
 Pricing
 </a>
+
+
+<a href="#faq">
+FAQ
+</a>
+
 
 <a href="#contact">
 Contact
@@ -62,13 +71,14 @@ Contact
 
 
 
-<a class="nav-button" href="#contact">
+<a href="#contact" class="nav-button">
 Free Preview
 </a>
 
 
 
 </nav>
+
 
 
 
@@ -87,18 +97,18 @@ Free Preview
 
 
 <div class="badge">
-PREMIUM WEBSITES FOR UK BUSINESSES
+WEBSITES BUILT FOR BUSINESS GROWTH
 </div>
 
 
 
 <h1>
 
-Websites That Make
+Premium Websites
 <br>
 
 <span>
-Businesses Stand Out.
+Without The Agency Price.
 </span>
 
 </h1>
@@ -108,8 +118,8 @@ Businesses Stand Out.
 
 <p>
 
-We design, build and manage premium websites for local businesses.
-Your website, hosting and updates handled in one simple subscription.
+We design, build and manage professional websites for local businesses.
+Your website, hosting, security and updates are handled by us.
 
 </p>
 
@@ -118,13 +128,13 @@ Your website, hosting and updates handled in one simple subscription.
 <div class="hero-buttons">
 
 
-<a class="button primary" href="#contact">
-Get Your Free Preview
+<a href="#contact" class="button primary">
+Get Your Free Template
 </a>
 
 
-<a class="button secondary" href="#demos">
-View Demo Websites
+<a href="#demos" class="button secondary">
+Explore Demos
 </a>
 
 
@@ -133,16 +143,17 @@ View Demo Websites
 
 
 </div>
+
+
 
 
 
 <div class="hero-object">
 
-
 <div class="glow"></div>
 
-
 </div>
+
 
 
 
@@ -165,11 +176,11 @@ View Demo Websites
 <div>
 
 <h3>
-500+
+£500
 </h3>
 
 <p>
-Websites Built
+Starting Website Build
 </p>
 
 </div>
@@ -197,11 +208,103 @@ Managed Hosting
 </h3>
 
 <p>
-Custom Designed
+Custom Designs
 </p>
 
 </div>
 
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- WHY VANTA -->
+
+
+<section>
+
+
+<h2>
+Everything Your Business Needs Online
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+
+<h3>
+Custom Design
+</h3>
+
+
+<p>
+
+No templates.
+Every website is designed around your brand, customers and goals.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+We Handle Everything
+</h3>
+
+
+<p>
+
+Hosting, updates, security and improvements are managed so you don't have to.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+Built To Convert
+</h3>
+
+
+<p>
+
+Designed to turn visitors into enquiries, bookings and customers.
+
+</p>
+
+
+</div>
+
+
+
+</div>
 
 
 </section>
@@ -221,7 +324,7 @@ Custom Designed
 
 
 <h2>
-Everything Managed For You
+Our Services
 </h2>
 
 
@@ -233,15 +336,17 @@ Everything Managed For You
 <div class="card">
 
 <h3>
-Website Design
+Website Development
 </h3>
 
 
 <p>
-Custom websites designed around your business and customers.
+Fast, modern and mobile-friendly websites built specifically for your business.
 </p>
 
+
 </div>
+
 
 
 
@@ -250,15 +355,17 @@ Custom websites designed around your business and customers.
 <div class="card">
 
 <h3>
-Hosting & Security
+Hosting & Maintenance
 </h3>
 
 
 <p>
-Fast hosting, SSL security and backups included.
+We keep your website running smoothly with updates, security and support.
 </p>
 
+
 </div>
+
 
 
 
@@ -267,20 +374,21 @@ Fast hosting, SSL security and backups included.
 <div class="card">
 
 <h3>
-Monthly Improvements
+Growth Improvements
 </h3>
 
 
 <p>
-We maintain and improve your website so you never worry about it.
+Continued improvements to help your website perform better over time.
 </p>
 
-</div>
-
-
 
 </div>
 
+
+
+
+</div>
 
 
 </section>
@@ -307,9 +415,10 @@ See What Your Business Could Look Like
 
 <p class="section-text">
 
-Explore our interactive website examples built for real businesses.
+Explore interactive examples built for different industries.
 
 </p>
+
 
 
 
@@ -350,7 +459,7 @@ Harrison & Co.
 
 
 <p>
-Premium Barbershop
+Luxury Barbershop Website
 </p>
 
 
@@ -359,8 +468,8 @@ View Demo →
 </button>
 
 
-
 </div>
+
 
 
 
@@ -392,13 +501,14 @@ Beauty & Aesthetics
 </div>
 
 
+
 <h3>
 Amelia Rose Studio
 </h3>
 
 
 <p>
-Beauty & Aesthetics
+Beauty Business Website
 </p>
 
 
@@ -407,8 +517,8 @@ View Demo →
 </button>
 
 
-
 </div>
+
 
 
 
@@ -440,13 +550,14 @@ Home Services
 </div>
 
 
+
 <h3>
 PrimeFlow Services
 </h3>
 
 
 <p>
-Home Services
+Trades Business Website
 </p>
 
 
@@ -455,7 +566,6 @@ View Demo →
 </button>
 
 
-
 </div>
 
 
@@ -464,6 +574,81 @@ View Demo →
 
 </div>
 
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- PROCESS -->
+
+
+<section>
+
+
+<h2>
+How It Works
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+<h3>
+01. Free Preview
+</h3>
+
+<p>
+We create an example showing what your business website could look like.
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+02. We Build It
+</h3>
+
+<p>
+Once approved, we create your custom professional website.
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+03. We Manage Everything
+</h3>
+
+<p>
+Your hosting, updates and maintenance are handled monthly.
+</p>
+
+</div>
+
+
+
+</div>
 
 
 </section>
@@ -488,15 +673,29 @@ Simple Pricing
 
 
 
+<p class="section-text">
+
+One affordable build fee. Everything else managed by us.
+
+</p>
+
+
+
+
+
 <div class="pricing-grid">
+
+
 
 
 
 <div class="price-card">
 
+
 <h3>
 Starter
 </h3>
+
 
 <h1>
 £500
@@ -510,18 +709,30 @@ Starter
 
 <ul>
 
-<li>Custom Website</li>
+<li>
+Custom Website
+</li>
 
-<li>Hosting Included</li>
+<li>
+Hosting Included
+</li>
 
-<li>Security Updates</li>
+<li>
+Security Updates
+</li>
 
-<li>Basic Support</li>
+<li>
+Basic Support
+</li>
 
 </ul>
 
 
 </div>
+
+
+
+
 
 
 
@@ -533,6 +744,7 @@ Starter
 <h3>
 Growth
 </h3>
+
 
 <h1>
 £500
@@ -546,13 +758,25 @@ Growth
 
 <ul>
 
-<li>Everything Starter</li>
+<li>
+Everything Starter
+</li>
 
-<li>Lead Forms</li>
+<li>
+Lead Generation Forms
+</li>
 
-<li>Analytics</li>
+<li>
+Analytics Tracking
+</li>
 
-<li>Monthly Improvements</li>
+<li>
+Monthly Improvements
+</li>
+
+<li>
+Priority Support
+</li>
 
 </ul>
 
@@ -563,11 +787,17 @@ Growth
 
 
 
+
+
+
+
 <div class="price-card">
+
 
 <h3>
 Premium
 </h3>
+
 
 <h1>
 £500
@@ -581,18 +811,142 @@ Premium
 
 <ul>
 
-<li>Everything Growth</li>
+<li>
+Everything Growth
+</li>
 
-<li>SEO Pages</li>
+<li>
+SEO Improvements
+</li>
 
-<li>Unlimited Updates</li>
+<li>
+Landing Pages
+</li>
 
-<li>Priority Support</li>
+<li>
+Unlimited Updates
+</li>
 
 </ul>
 
 
 </div>
+
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- FREE TEMPLATE -->
+
+
+<section class="template">
+
+
+<h2>
+Get Your Free Website Preview
+</h2>
+
+
+<p>
+
+Not ready to commit?
+We'll create a free example showing how your business could look online.
+
+</p>
+
+
+
+<a href="#contact" class="button primary">
+
+Request My Preview
+
+</a>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- FAQ -->
+
+
+<section id="faq">
+
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+
+
+<div class="faq">
+
+
+
+<div>
+
+<h3>
+Do I own the website?
+</h3>
+
+<p>
+We manage the website, hosting and maintenance so everything stays working perfectly.
+</p>
+
+</div>
+
+
+
+
+<div>
+
+<h3>
+Why a monthly subscription?
+</h3>
+
+<p>
+Instead of paying thousands upfront, you get continuous support and improvements.
+</p>
+
+</div>
+
+
+
+
+
+<div>
+
+<h3>
+Can I cancel?
+</h3>
+
+<p>
+Contact us and we can discuss the best option for your business.
+</p>
+
+</div>
+
 
 
 
@@ -617,7 +971,7 @@ Premium
 
 
 <h2>
-Get Your Free Website Preview
+Start Your Free Website Preview
 </h2>
 
 
@@ -625,28 +979,26 @@ Get Your Free Website Preview
 <form action="https://formspree.io/f/YOUR_ID" method="POST">
 
 
-
-<input 
+<input
 name="name"
 placeholder="Your Name"
-required>
-
+required
+>
 
 
 <input
 name="business"
 placeholder="Business Name"
-required>
-
+required
+>
 
 
 <input
 name="email"
 type="email"
-placeholder="Email"
-required>
-
-
+placeholder="Email Address"
+required
+>
 
 
 <textarea
@@ -688,8 +1040,11 @@ VANTA © 2026
 
 
 
+
 <script src="demos/harrison.js"></script>
+
 <script src="demos/amelia.js"></script>
+
 <script src="demos/primeflow.js"></script>
 
 <script src="script.js"></script>
