@@ -302,6 +302,108 @@ card.dataset.demo
 function openDemo(type){
 
 
+const overlay =
+document.createElement("div");
+
+
+
+overlay.className =
+"demo-overlay";
+
+
+
+overlay.innerHTML = `
+
+
+<div class="demo-window">
+
+
+<button class="close-demo">
+✕
+</button>
+
+
+<div class="demo-browser">
+
+
+<div class="demo-bar">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+
+
+<div class="demo-content">
+
+${getDemo(type)}
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+`;
+
+
+
+
+document.body.appendChild(overlay);
+
+
+
+document.body.style.overflow="hidden";
+
+
+
+requestAnimationFrame(()=>{
+
+overlay.classList.add("active");
+
+});
+
+
+
+
+
+const close =
+overlay.querySelector(".close-demo");
+
+
+
+close.onclick=()=>{
+
+
+overlay.classList.remove("active");
+
+
+setTimeout(()=>{
+
+
+overlay.remove();
+
+
+document.body.style.overflow="";
+
+
+},500);
+
+
+};
+
+
+
+
+}
+
+
 
 const overlay =
 document.createElement("div");
