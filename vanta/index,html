@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+VANTA — Premium Websites For Local Businesses
+</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar">
+
+
+<div class="logo">
+VANTA
+</div>
+
+
+
+<div class="nav-links">
+
+<a href="#services">
+Services
+</a>
+
+<a href="#demos">
+Demos
+</a>
+
+<a href="#pricing">
+Pricing
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+
+</div>
+
+
+
+<a class="nav-button" href="#contact">
+Free Preview
+</a>
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+<!-- HERO -->
+
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+
+<div class="badge">
+PREMIUM WEBSITES FOR UK BUSINESSES
+</div>
+
+
+
+<h1>
+
+Websites That Make
+<br>
+
+<span>
+Businesses Stand Out.
+</span>
+
+</h1>
+
+
+
+
+<p>
+
+We design, build and manage premium websites for local businesses.
+Your website, hosting and updates handled in one simple subscription.
+
+</p>
+
+
+
+<div class="hero-buttons">
+
+
+<a class="button primary" href="#contact">
+Get Your Free Preview
+</a>
+
+
+<a class="button secondary" href="#demos">
+View Demo Websites
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="hero-object">
+
+
+<div class="glow"></div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- TRUST -->
+
+
+<section class="trust">
+
+
+<div>
+
+<h3>
+500+
+</h3>
+
+<p>
+Websites Built
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+24/7
+</h3>
+
+<p>
+Managed Hosting
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+100%
+</h3>
+
+<p>
+Custom Designed
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- SERVICES -->
+
+
+<section id="services">
+
+
+<h2>
+Everything Managed For You
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+<h3>
+Website Design
+</h3>
+
+
+<p>
+Custom websites designed around your business and customers.
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+Hosting & Security
+</h3>
+
+
+<p>
+Fast hosting, SSL security and backups included.
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+Monthly Improvements
+</h3>
+
+
+<p>
+We maintain and improve your website so you never worry about it.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- DEMOS -->
+
+
+<section id="demos">
+
+
+<h2>
+See What Your Business Could Look Like
+</h2>
+
+
+
+<p class="section-text">
+
+Explore our interactive website examples built for real businesses.
+
+</p>
+
+
+
+
+<div class="demo-grid">
+
+
+
+
+
+<div class="demo-card" data-demo="harrison">
+
+
+<div class="browser">
+
+
+<div class="browser-top"></div>
+
+
+<div class="preview">
+
+Harrison & Co.
+
+<br>
+
+Premium Barbershop
+
+</div>
+
+
+</div>
+
+
+
+<h3>
+Harrison & Co.
+</h3>
+
+
+<p>
+Premium Barbershop
+</p>
+
+
+<button>
+View Demo →
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="demo-card" data-demo="amelia">
+
+
+<div class="browser">
+
+
+<div class="browser-top"></div>
+
+
+<div class="preview">
+
+Amelia Rose Studio
+
+<br>
+
+Beauty & Aesthetics
+
+</div>
+
+
+</div>
+
+
+<h3>
+Amelia Rose Studio
+</h3>
+
+
+<p>
+Beauty & Aesthetics
+</p>
+
+
+<button>
+View Demo →
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="demo-card" data-demo="primeflow">
+
+
+<div class="browser">
+
+
+<div class="browser-top"></div>
+
+
+<div class="preview">
+
+PrimeFlow Services
+
+<br>
+
+Home Services
+
+</div>
+
+
+</div>
+
+
+<h3>
+PrimeFlow Services
+</h3>
+
+
+<p>
+Home Services
+</p>
+
+
+<button>
+View Demo →
+</button>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- PRICING -->
+
+
+<section id="pricing">
+
+
+<h2>
+Simple Pricing
+</h2>
+
+
+
+<div class="pricing-grid">
+
+
+
+<div class="price-card">
+
+<h3>
+Starter
+</h3>
+
+<h1>
+£500
+</h1>
+
+
+<p>
++ £49/month
+</p>
+
+
+<ul>
+
+<li>Custom Website</li>
+
+<li>Hosting Included</li>
+
+<li>Security Updates</li>
+
+<li>Basic Support</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div class="price-card featured">
+
+
+<h3>
+Growth
+</h3>
+
+<h1>
+£500
+</h1>
+
+
+<p>
++ £99/month
+</p>
+
+
+<ul>
+
+<li>Everything Starter</li>
+
+<li>Lead Forms</li>
+
+<li>Analytics</li>
+
+<li>Monthly Improvements</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div class="price-card">
+
+<h3>
+Premium
+</h3>
+
+<h1>
+£500
+</h1>
+
+
+<p>
++ £199/month
+</p>
+
+
+<ul>
+
+<li>Everything Growth</li>
+
+<li>SEO Pages</li>
+
+<li>Unlimited Updates</li>
+
+<li>Priority Support</li>
+
+</ul>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- CONTACT -->
+
+
+<section id="contact">
+
+
+<h2>
+Get Your Free Website Preview
+</h2>
+
+
+
+<form action="https://formspree.io/f/YOUR_ID" method="POST">
+
+
+
+<input 
+name="name"
+placeholder="Your Name"
+required>
+
+
+
+<input
+name="business"
+placeholder="Business Name"
+required>
+
+
+
+<input
+name="email"
+type="email"
+placeholder="Email"
+required>
+
+
+
+
+<textarea
+name="message"
+placeholder="Tell us about your business">
+</textarea>
+
+
+
+<button class="button primary">
+
+Send Request
+
+</button>
+
+
+
+</form>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<footer>
+
+VANTA © 2026
+
+</footer>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>
