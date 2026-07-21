@@ -1,223 +1,335 @@
-/* ==========================
-   VANTA JAVASCRIPT
-========================== */
+/* =========================
+   VANTA — SCRIPT.JS
+========================= */
 
 
-/* ==========================
-   MOUSE ENERGY TRAIL
-========================== */
+/* =========================
+   SCROLL REVEAL ANIMATION
+========================= */
+
+
+const fadeElements = document.querySelectorAll(".fade");
+
+
+const revealOnScroll = () => {
+
+    fadeElements.forEach(element => {
+
+        const position = element.getBoundingClientRect().top;
+
+        const screenHeight = window.innerHeight;
+
+
+        if(position < screenHeight - 100){
+
+            element.classList.add("show");
+
+        }
+
+    });
+
+};
+
+
+window.addEventListener(
+    "scroll",
+    revealOnScroll
+);
+
+
+revealOnScroll();
+
+
+
+/* =========================
+   MOUSE GLOW FOLLOWER
+========================= */
+
+
+const glow = document.createElement("div");
+
+
+glow.className = "mouse-glow";
+
+
+document.body.appendChild(glow);
+
+
+
+const glowStyle = document.createElement("style");
+
+
+glowStyle.innerHTML = `
+
+.mouse-glow {
+
+position:fixed;
+
+width:300px;
+
+height:300px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+circle,
+rgba(43,127,255,.18),
+transparent 70%
+);
+
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+z-index:-1;
+
+filter:blur(20px);
+
+}
+
+`;
+
+
+document.head.appendChild(glowStyle);
+
+
 
 document.addEventListener(
 "mousemove",
 (e)=>{
 
-let trail = document.createElement("div");
 
-trail.className = "trail";
+glow.style.left = e.clientX + "px";
 
-
-trail.style.left = e.clientX + "px";
-trail.style.top = e.clientY + "px";
+glow.style.top = e.clientY + "px";
 
 
-document.body.appendChild(trail);
+});
 
 
 
-setTimeout(()=>{
-
-trail.style.opacity="0";
-
-trail.style.transform="scale(0)";
-
-},50);
 
 
+/* =========================
+   HERO PARALLAX
+========================= */
 
-setTimeout(()=>{
 
-trail.remove();
+const heroShape = document.querySelector(".hero::after");
 
-},600);
+
+const shape = document.querySelector(".hero");
+
+
+if(shape){
+
+
+document.addEventListener(
+"mousemove",
+(e)=>{
+
+
+let x = 
+(e.clientX / window.innerWidth - .5) * 30;
+
+
+let y = 
+(e.clientY / window.innerHeight - .5) * 30;
+
+
+
+shape.style.transform =
+`
+translate(${x}px,${y}px)
+`;
+
+
+
+});
 
 
 }
 
-);
 
 
-
-/* ==========================
-   ABOUT SCROLL REVEAL
-========================== */
-
-
-const about = document.querySelector(".about");
+/* =========================
+   NAVBAR BACKGROUND CHANGE
+========================= */
 
 
-if(about){
+const nav = document.querySelector("nav");
+
 
 window.addEventListener(
 "scroll",
 ()=>{
 
 
-let position = about.getBoundingClientRect().top;
+if(window.scrollY > 50){
+
+nav.style.background =
+"rgba(3,3,3,.75)";
 
 
-if(position < window.innerHeight - 150){
-
-about.classList.add("show");
-
-}
-
-
-}
-
-);
-
-}
-
-
-
-/* ==========================
-   SMOOTH SCROLL
-========================== */
-
-
-document.querySelectorAll("a[href^='#']").forEach(link=>{
-
-
-link.addEventListener(
-"click",
-function(e){
-
-
-const target = document.querySelector(
-this.getAttribute("href")
-);
-
-
-if(target){
-
-e.preventDefault();
-
-target.scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-}
+nav.style.borderBottom =
+"1px solid rgba(255,255,255,.08)";
 
 
 }
 
-);
+else{
+
+
+nav.style.background =
+"transparent";
+
+
+nav.style.borderBottom =
+"none";
+
+
+}
 
 
 });
 
 
 
-/* ==========================
-   BUTTON HOVER TILT
-========================== */
+
+/* =========================
+   BUTTON RIPPLE EFFECT
+========================= */
 
 
-const buttons = document.querySelectorAll("button");
+const buttons =
+document.querySelectorAll(".btn");
+
 
 
 buttons.forEach(button=>{
 
 
 button.addEventListener(
-"mousemove",
-(e)=>{
+"click",
+function(e){
 
 
-const rect = button.getBoundingClientRect();
+let ripple =
+document.createElement("span");
 
 
-const x =
-e.clientX - rect.left;
+ripple.className="ripple";
 
 
-const y =
-e.clientY - rect.top;
-
-
-
-button.style.transform =
-`
-perspective(400px)
-rotateX(${-(y-rect.height/2)/15}deg)
-rotateY(${(x-rect.width/2)/15}deg)
-`;
+this.appendChild(ripple);
 
 
 
-}
+setTimeout(()=>{
 
-);
+ripple.remove();
 
-
-
-button.addEventListener(
-"mouseleave",
-()=>{
+},600);
 
 
-button.style.transform="";
 
-
-}
-
-);
+});
 
 
 });
 
 
 
-/* ==========================
-   PREVIEW PARALLAX
-========================== */
+
+const rippleStyle =
+document.createElement("style");
 
 
-const preview =
-document.querySelector(".preview");
+rippleStyle.innerHTML=`
+
+.btn {
+
+position:relative;
+overflow:hidden;
+
+}
 
 
-if(preview){
+.ripple {
+
+position:absolute;
+
+width:150px;
+
+height:150px;
+
+background:
+rgba(255,255,255,.25);
 
 
-document.addEventListener(
-"mousemove",
-(e)=>{
+border-radius:50%;
 
 
-let x =
-(e.clientX / window.innerWidth - .5) * 10;
+transform:translate(-50%,-50%);
 
 
-let y =
-(e.clientY / window.innerHeight - .5) * 10;
+animation:ripple .6s linear;
+
+
+}
 
 
 
-preview.style.transform =
-`
-perspective(1200px)
-rotateY(${-8+x}deg)
-rotateX(${y}deg)
+@keyframes ripple {
+
+
+from{
+
+opacity:1;
+
+transform:
+scale(0);
+
+}
+
+
+to{
+
+opacity:0;
+
+transform:
+scale(4);
+
+}
+
+
+}
+
+
 `;
 
 
 
-}
-
-);
+document.head.appendChild(rippleStyle);
 
 
-}
+
+
+/* =========================
+   SMOOTH PAGE LOAD
+========================= */
+
+
+window.addEventListener(
+"load",
+()=>{
+
+
+document.body.style.opacity="1";
+
+
+});
+
