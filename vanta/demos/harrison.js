@@ -1,444 +1,26 @@
 /* =========================
-VANTA — SCRIPT.JS
+HARRISON & CO.
+PREMIUM BARBERSHOP DEMO
 ========================= */
 
 
-/* =========================
-NAVBAR EFFECT
-========================= */
+const harrisonDemo = `
 
 
-const navbar = document.querySelector(".navbar");
+<div class="demo-page harrison-demo">
 
 
-window.addEventListener("scroll",()=>{
 
+<section class="harrison-hero">
 
-if(window.scrollY > 50){
 
-navbar.style.background =
-"rgba(5,5,5,.75)";
+<div>
 
 
-navbar.style.backdropFilter =
-"blur(20px)";
+<p class="demo-tag">
+PREMIUM BARBERSHOP
+</p>
 
-
-navbar.style.borderBottom =
-"1px solid rgba(255,255,255,.08)";
-
-
-}
-
-else{
-
-
-navbar.style.background =
-"transparent";
-
-
-navbar.style.borderBottom =
-"none";
-
-
-}
-
-
-});
-
-
-
-
-
-
-
-/* =========================
-SMOOTH SCROLL
-========================= */
-
-
-document.querySelectorAll('a[href^="#"]')
-.forEach(link=>{
-
-
-link.addEventListener("click",(e)=>{
-
-
-const target =
-document.querySelector(
-link.getAttribute("href")
-);
-
-
-
-if(target){
-
-e.preventDefault();
-
-
-target.scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-
-}
-
-
-});
-
-
-});
-
-
-
-
-
-
-
-
-
-/* =========================
-REVEAL ANIMATION
-========================= */
-
-
-const revealItems =
-document.querySelectorAll(
-".card, .demo-card, .price-card"
-);
-
-
-
-const reveal = ()=>{
-
-
-revealItems.forEach(item=>{
-
-
-const position =
-item.getBoundingClientRect().top;
-
-
-if(position <
-window.innerHeight - 100){
-
-
-item.style.opacity="1";
-
-
-item.style.transform=
-"translateY(0)";
-
-
-}
-
-
-});
-
-
-};
-
-
-
-reveal();
-
-
-window.addEventListener(
-"scroll",
-reveal
-);
-
-
-
-
-
-revealItems.forEach(item=>{
-
-
-item.style.opacity="0";
-
-
-item.style.transform=
-"translateY(50px)";
-
-
-item.style.transition=
-"all .8s ease";
-
-
-});
-
-
-
-
-
-
-
-
-
-/* =========================
-MOUSE GLOW
-========================= */
-
-
-const cursorGlow =
-document.createElement("div");
-
-
-cursorGlow.className =
-"cursor-glow";
-
-
-document.body.appendChild(cursorGlow);
-
-
-
-const glowStyle =
-document.createElement("style");
-
-
-glowStyle.innerHTML=`
-
-.cursor-glow{
-
-position:fixed;
-
-width:300px;
-
-height:300px;
-
-border-radius:50%;
-
-
-background:
-
-radial-gradient(
-circle,
-rgba(43,127,255,.18),
-transparent 70%
-);
-
-
-pointer-events:none;
-
-transform:translate(-50%,-50%);
-
-
-filter:blur(20px);
-
-
-z-index:-1;
-
-
-}
-
-
-`;
-
-
-document.head.appendChild(glowStyle);
-
-
-
-
-document.addEventListener(
-"mousemove",
-(e)=>{
-
-
-cursorGlow.style.left =
-e.clientX+"px";
-
-
-cursorGlow.style.top =
-e.clientY+"px";
-
-
-});
-
-
-
-
-
-
-
-
-
-/* =========================
-DEMO VIEWER SYSTEM
-========================= */
-
-
-const demoCards =
-document.querySelectorAll(".demo-card");
-
-
-
-demoCards.forEach(card=>{
-
-
-card.addEventListener(
-"click",
-()=>{
-
-
-openDemo(
-card.dataset.demo
-);
-
-
-});
-
-
-});
-
-
-
-
-
-
-function openDemo(type){
-
-
-
-const overlay =
-document.createElement("div");
-
-
-
-overlay.className =
-"demo-overlay";
-
-
-
-
-overlay.innerHTML = `
-
-<div class="demo-window">
-
-
-<button class="close-demo">
-
-✕
-</button>
-
-
-
-<div class="demo-browser">
-
-
-<div class="demo-bar">
-
-● ● ●
-
-</div>
-
-
-
-<div class="demo-content">
-
-
-${getDemo(type)}
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-`;
-
-
-
-
-
-document.body.appendChild(
-overlay
-);
-
-
-
-document.body.style.overflow=
-"hidden";
-
-
-
-
-setTimeout(()=>{
-
-overlay.classList.add(
-"active"
-);
-
-
-},50);
-
-
-
-
-
-overlay.querySelector(
-".close-demo"
-)
-
-.onclick=()=>{
-
-
-overlay.classList.remove(
-"active"
-);
-
-
-
-setTimeout(()=>{
-
-
-overlay.remove();
-
-
-document.body.style.overflow=
-"";
-
-
-},400);
-
-
-
-};
-
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-DEMO CONTENT
-========================= */
-
-
-function getDemo(type){
-
-
-
-if(type==="harrison"){
-
-
-return `
-
-<div class="demo-site barber">
 
 
 <h1>
@@ -446,9 +28,12 @@ Harrison & Co.
 </h1>
 
 
+
 <p>
-Premium grooming tailored for you.
+Modern grooming.
+Traditional standards.
 </p>
+
 
 
 <button>
@@ -456,18 +41,164 @@ Book Appointment
 </button>
 
 
-<hr>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="demo-section">
 
 
 <h2>
-Our Services
+The Experience
 </h2>
 
 
+
 <p>
-Haircuts • Beard Styling • Packages
+
+A premium grooming experience built around
+precision, style and attention to detail.
+
 </p>
 
+
+
+<div class="demo-services">
+
+
+
+<div>
+
+<h3>
+Classic Cut
+</h3>
+
+
+<p>
+A tailored haircut designed around your style.
+</p>
+
+
+</div>
+
+
+
+
+
+<div>
+
+<h3>
+Beard Styling
+</h3>
+
+
+<p>
+Expert shaping and finishing.
+</p>
+
+
+</div>
+
+
+
+
+
+<div>
+
+<h3>
+Full Experience
+</h3>
+
+
+<p>
+Haircut, beard and styling package.
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="harrison-gallery">
+
+
+<div class="gallery-box">
+
+</div>
+
+
+<div class="gallery-box">
+
+</div>
+
+
+<div class="gallery-box">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="harrison-dark">
+
+
+<h2>
+Crafted For Confidence
+</h2>
+
+
+
+<p>
+
+Every appointment is focused on quality,
+comfort and a personalised experience.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="demo-section">
 
 
 <h2>
@@ -475,118 +206,72 @@ Customer Reviews
 </h2>
 
 
-<p>
-★★★★★ Amazing service</p>
 
+
+<div class="review">
+
+★★★★★
+
+<br><br>
+
+"Best barber experience I've had.
+The attention to detail is unmatched."
 
 </div>
 
-`;
-
-}
 
 
 
 
-if(type==="amelia"){
+<div class="review">
+
+★★★★★
+
+<br><br>
+
+"Professional, friendly and always consistent."
+
+</div>
 
 
-return `
+
+</section>
 
 
-<div class="demo-site beauty">
 
 
-<h1>
-Amelia Rose Studio
-</h1>
+
+
+
+
+
+<section class="booking">
+
+
+<h2>
+Ready For Your Next Cut?
+</h2>
+
 
 
 <p>
-Luxury beauty & aesthetics.
+
+Reserve your appointment today.
+
 </p>
+
 
 
 <button>
-Book Treatment
+
+Book Now
+
 </button>
 
 
-<hr>
+</section>
 
 
-<h2>
-Treatments</h2>
-
-
-<p>
-Facials • Nails • Aesthetics
-</p>
-
-
-
-<h2>
-Reviews</h2>
-
-
-<p>
-★★★★★ Beautiful experience</p>
-
-
-</div>
-
-
-`;
-
-}
-
-
-
-
-
-if(type==="primeflow"){
-
-
-return `
-
-
-<div class="demo-site trade">
-
-
-<h1>
-PrimeFlow Services
-</h1>
-
-
-<p>
-Reliable home services when you need them.
-</p>
-
-
-<button>
-Request Quote
-</button>
-
-
-<hr>
-
-
-<h2>
-Our Services</h2>
-
-
-<p>
-Repairs • Installation • Maintenance
-</p>
-
-
-
-<h2>
-Trusted Service</h2>
-
-
-<p>
-★★★★★ Professional & reliable</p>
 
 
 
@@ -594,277 +279,3 @@ Trusted Service</h2>
 
 
 `;
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-DEMO POPUP CSS
-========================= */
-
-
-const demoCSS =
-document.createElement("style");
-
-
-demoCSS.innerHTML=`
-
-.demo-overlay{
-
-
-position:fixed;
-
-
-inset:0;
-
-
-background:
-
-rgba(0,0,0,.85);
-
-
-
-backdrop-filter:blur(20px);
-
-
-
-display:flex;
-
-
-align-items:center;
-
-
-justify-content:center;
-
-
-
-opacity:0;
-
-
-
-transition:.5s;
-
-
-
-z-index:9999;
-
-
-}
-
-
-
-.demo-overlay.active{
-
-
-opacity:1;
-
-
-}
-
-
-
-
-.demo-window{
-
-
-width:90%;
-
-
-height:85%;
-
-
-transform:scale(.85);
-
-
-transition:.5s;
-
-
-}
-
-
-
-.demo-overlay.active .demo-window{
-
-
-transform:scale(1);
-
-
-}
-
-
-
-
-
-.close-demo{
-
-
-position:absolute;
-
-
-top:40px;
-
-
-right:50px;
-
-
-background:none;
-
-
-border:none;
-
-
-color:white;
-
-
-font-size:30px;
-
-
-cursor:pointer;
-
-
-}
-
-
-
-
-
-.demo-browser{
-
-
-height:100%;
-
-
-background:white;
-
-
-border-radius:25px;
-
-
-overflow:hidden;
-
-
-color:black;
-
-
-}
-
-
-
-.demo-bar{
-
-
-height:40px;
-
-
-background:#ddd;
-
-
-padding:10px;
-
-
-}
-
-
-
-.demo-content{
-
-
-height:calc(100% - 40px);
-
-
-overflow-y:auto;
-
-
-padding:60px;
-
-
-}
-
-
-
-
-.demo-site{
-
-
-max-width:800px;
-
-
-margin:auto;
-
-
-font-family:Inter,sans-serif;
-
-
-}
-
-
-
-
-.demo-site h1{
-
-
-font-size:70px;
-
-
-margin-bottom:20px;
-
-
-}
-
-
-
-.demo-site p{
-
-
-font-size:22px;
-
-
-margin:25px 0;
-
-
-}
-
-
-
-
-.demo-site button{
-
-
-padding:15px 30px;
-
-
-border-radius:30px;
-
-
-border:none;
-
-
-background:black;
-
-
-color:white;
-
-
-}
-
-
-
-`;
-
-
-
-document.head.appendChild(
-demoCSS
-);
