@@ -1,16 +1,26 @@
+/* =========================
+PRIMEFLOW SERVICES
+TRADES BUSINESS DEMO
+========================= */
+
+
 const primeflowDemo = `
 
 
-<div class="demo-page primeflow">
+<div class="demo-page primeflow-demo">
 
 
 
-<section class="demo-hero">
+<section class="primeflow-hero">
+
+
+<div>
 
 
 <p class="demo-tag">
-HOME SERVICES
+PROFESSIONAL HOME SERVICES
 </p>
+
 
 
 
@@ -20,20 +30,27 @@ PrimeFlow Services
 
 
 
+
 <p>
 Reliable solutions for your home.
+Done properly, every time.
 </p>
 
 
 
 
 <button>
-Request Quote
+Request A Quote
 </button>
 
 
 
+</div>
+
+
+
 </section>
+
 
 
 
@@ -46,56 +63,149 @@ Request Quote
 
 
 <h2>
-Our Services
+What We Do
 </h2>
+
+
 
 
 
 <div class="demo-services">
 
 
+
 <div>
+
 
 <h3>
 Repairs
 </h3>
 
+
 <p>
-Fast professional repairs.
+
+Fast and reliable repairs from
+experienced professionals.
+
 </p>
+
 
 </div>
 
 
 
 
+
+
+
 <div>
+
 
 <h3>
 Installation
 </h3>
 
+
 <p>
-Quality installations done right.
+
+Professional installation with
+quality guaranteed.
+
 </p>
 
+
 </div>
+
+
+
 
 
 
 
 <div>
 
+
 <h3>
 Maintenance
 </h3>
 
+
 <p>
-Keep your home running smoothly.
+
+Keep everything working perfectly
+all year round.
+
 </p>
+
 
 </div>
 
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="prime-stats">
+
+
+
+<div>
+
+<h2>
+10+
+</h2>
+
+
+<p>
+Years Experience
+</p>
+
+
+</div>
+
+
+
+
+
+<div>
+
+<h2>
+500+
+</h2>
+
+
+<p>
+Jobs Completed
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div>
+
+<h2>
+5★
+</h2>
+
+
+<p>
+Customer Rating
+</p>
 
 
 </div>
@@ -111,7 +221,8 @@ Keep your home running smoothly.
 
 
 
-<section class="demo-dark">
+
+<section class="prime-dark">
 
 
 <h2>
@@ -119,15 +230,19 @@ Trusted Professionals
 </h2>
 
 
+
 <p>
+
 Clear communication.
-Reliable service.
-Quality results.
+Quality workmanship.
+Reliable results.
+
 </p>
 
 
-
 </section>
+
+
 
 
 
@@ -144,29 +259,31 @@ Customer Reviews
 
 
 
-<div class="review">
-
-★★★★★
-
-<br>
-
-"Quick response and great work."
-
-</div>
-
-
 
 
 <div class="review">
 
 ★★★★★
 
-<br>
+<br><br>
 
-"Would recommend to anyone."
+"Excellent service from start to finish."
 
 </div>
 
+
+
+
+
+<div class="review">
+
+★★★★★
+
+<br><br>
+
+"Professional team and great results."
+
+</div>
 
 
 
@@ -179,17 +296,28 @@ Customer Reviews
 
 
 
-<section class="demo-contact">
+
+<section class="prime-contact">
 
 
 <h2>
-Need Help Today?
+Need A Quote?
 </h2>
 
 
 
+<p>
+
+Get in touch today.
+
+</p>
+
+
+
 <button>
-Get A Quote
+
+Request Quote
+
 </button>
 
 
@@ -201,6 +329,7 @@ Get A Quote
 
 
 </div>
+
 
 
 `;
