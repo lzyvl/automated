@@ -1,162 +1,67 @@
 /* =========================
-   VANTA — SCRIPT.JS
+VANTA PREMIUM SCRIPT.JS
 ========================= */
 
 
 /* =========================
-   SCROLL REVEAL ANIMATION
+PAGE LOADING ANIMATION
 ========================= */
 
 
-const fadeElements = document.querySelectorAll(".fade");
+window.addEventListener("load", () => {
+
+    document.body.classList.add("loaded");
+
+});
 
 
-const revealOnScroll = () => {
-
-    fadeElements.forEach(element => {
-
-        const position = element.getBoundingClientRect().top;
-
-        const screenHeight = window.innerHeight;
 
 
-        if(position < screenHeight - 100){
+/* =========================
+SCROLL REVEAL
+========================= */
 
-            element.classList.add("show");
+
+const reveals = document.querySelectorAll(".fade");
+
+
+function reveal(){
+
+    reveals.forEach(item=>{
+
+
+        const position =
+        item.getBoundingClientRect().top;
+
+
+        if(position < window.innerHeight - 120){
+
+            item.classList.add("show");
 
         }
 
+
     });
 
-};
+
+}
 
 
 window.addEventListener(
-    "scroll",
-    revealOnScroll
+"scroll",
+reveal
 );
 
 
-revealOnScroll();
+reveal();
 
-
-
-/* =========================
-   MOUSE GLOW FOLLOWER
-========================= */
-
-
-const glow = document.createElement("div");
-
-
-glow.className = "mouse-glow";
-
-
-document.body.appendChild(glow);
-
-
-
-const glowStyle = document.createElement("style");
-
-
-glowStyle.innerHTML = `
-
-.mouse-glow {
-
-position:fixed;
-
-width:300px;
-
-height:300px;
-
-border-radius:50%;
-
-background:
-
-radial-gradient(
-circle,
-rgba(43,127,255,.18),
-transparent 70%
-);
-
-
-pointer-events:none;
-
-transform:translate(-50%,-50%);
-
-z-index:-1;
-
-filter:blur(20px);
-
-}
-
-`;
-
-
-document.head.appendChild(glowStyle);
-
-
-
-document.addEventListener(
-"mousemove",
-(e)=>{
-
-
-glow.style.left = e.clientX + "px";
-
-glow.style.top = e.clientY + "px";
-
-
-});
 
 
 
 
 
 /* =========================
-   HERO PARALLAX
-========================= */
-
-
-const heroShape = document.querySelector(".hero::after");
-
-
-const shape = document.querySelector(".hero");
-
-
-if(shape){
-
-
-document.addEventListener(
-"mousemove",
-(e)=>{
-
-
-let x = 
-(e.clientX / window.innerWidth - .5) * 30;
-
-
-let y = 
-(e.clientY / window.innerHeight - .5) * 30;
-
-
-
-shape.style.transform =
-`
-translate(${x}px,${y}px)
-`;
-
-
-
-});
-
-
-}
-
-
-
-/* =========================
-   NAVBAR BACKGROUND CHANGE
+NAVBAR BLUR
 ========================= */
 
 
@@ -168,10 +73,15 @@ window.addEventListener(
 ()=>{
 
 
-if(window.scrollY > 50){
+if(window.scrollY > 60){
+
 
 nav.style.background =
-"rgba(3,3,3,.75)";
+"rgba(2,2,2,.75)";
+
+
+nav.style.backdropFilter =
+"blur(20px)";
 
 
 nav.style.borderBottom =
@@ -199,8 +109,228 @@ nav.style.borderBottom =
 
 
 
+
+
+
+
 /* =========================
-   BUTTON RIPPLE EFFECT
+CURSOR GLOW
+========================= */
+
+
+const glow =
+document.createElement("div");
+
+
+glow.className =
+"vanta-glow";
+
+
+document.body.appendChild(glow);
+
+
+
+const glowCSS =
+document.createElement("style");
+
+
+glowCSS.innerHTML = `
+
+.vanta-glow{
+
+position:fixed;
+
+width:300px;
+
+height:300px;
+
+border-radius:50%;
+
+
+background:
+
+radial-gradient(
+circle,
+rgba(43,127,255,.22),
+transparent 70%
+);
+
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+filter:blur(25px);
+
+z-index:-1;
+
+}
+
+`;
+
+
+document.head.appendChild(glowCSS);
+
+
+
+
+document.addEventListener(
+"mousemove",
+(e)=>{
+
+
+glow.style.left =
+e.clientX+"px";
+
+
+glow.style.top =
+e.clientY+"px";
+
+
+});
+
+
+
+
+
+
+
+/* =========================
+HERO PARALLAX
+========================= */
+
+
+const heroShape =
+document.querySelector(".hero-shape");
+
+
+document.addEventListener(
+"mousemove",
+(e)=>{
+
+
+if(heroShape){
+
+
+const x =
+(e.clientX /
+window.innerWidth - .5)
+*40;
+
+
+
+const y =
+(e.clientY /
+window.innerHeight - .5)
+*40;
+
+
+
+heroShape.style.transform =
+`
+translate(${x}px,${y}px)
+`;
+
+}
+
+
+});
+
+
+
+
+
+
+
+
+
+/* =========================
+3D CARD TILT
+========================= */
+
+
+const cards =
+document.querySelectorAll(".card");
+
+
+
+cards.forEach(card=>{
+
+
+card.addEventListener(
+"mousemove",
+(e)=>{
+
+
+const rect =
+card.getBoundingClientRect();
+
+
+
+const x =
+e.clientX - rect.left;
+
+
+const y =
+e.clientY - rect.top;
+
+
+
+const rotateX =
+((y / rect.height)-.5)*10;
+
+
+const rotateY =
+((x / rect.width)-.5)*10;
+
+
+
+card.style.transform =
+
+`
+
+perspective(800px)
+
+rotateX(${-rotateX}deg)
+
+rotateY(${rotateY}deg)
+
+translateY(-10px)
+
+`;
+
+
+
+});
+
+
+
+
+
+card.addEventListener(
+"mouseleave",
+()=>{
+
+
+card.style.transform =
+"";
+
+
+});
+
+
+});
+
+
+
+
+
+
+
+
+
+/* =========================
+MAGNETIC BUTTONS
 ========================= */
 
 
@@ -213,123 +343,107 @@ buttons.forEach(button=>{
 
 
 button.addEventListener(
-"click",
-function(e){
+"mousemove",
+(e)=>{
 
 
-let ripple =
-document.createElement("span");
-
-
-ripple.className="ripple";
-
-
-this.appendChild(ripple);
+const rect =
+button.getBoundingClientRect();
 
 
 
-setTimeout(()=>{
-
-ripple.remove();
-
-},600);
+const x =
+e.clientX - rect.left -
+rect.width/2;
 
 
-
-});
-
-
-});
+const y =
+e.clientY - rect.top -
+rect.height/2;
 
 
 
+button.style.transform =
 
-const rippleStyle =
-document.createElement("style");
+`
 
-
-rippleStyle.innerHTML=`
-
-.btn {
-
-position:relative;
-overflow:hidden;
-
-}
-
-
-.ripple {
-
-position:absolute;
-
-width:150px;
-
-height:150px;
-
-background:
-rgba(255,255,255,.25);
-
-
-border-radius:50%;
-
-
-transform:translate(-50%,-50%);
-
-
-animation:ripple .6s linear;
-
-
-}
-
-
-
-@keyframes ripple {
-
-
-from{
-
-opacity:1;
-
-transform:
-scale(0);
-
-}
-
-
-to{
-
-opacity:0;
-
-transform:
-scale(4);
-
-}
-
-
-}
-
+translate(
+${x*.15}px,
+${y*.15}px
+)
 
 `;
 
 
 
-document.head.appendChild(rippleStyle);
+});
+
+
+
+
+button.addEventListener(
+"mouseleave",
+()=>{
+
+
+button.style.transform =
+"";
+
+
+});
+
+
+});
+
+
+
+
+
 
 
 
 
 /* =========================
-   SMOOTH PAGE LOAD
+SMOOTH ANCHOR SCROLL
 ========================= */
 
 
-window.addEventListener(
-"load",
-()=>{
+document.querySelectorAll(
+'a[href^="#"]'
+)
+
+.forEach(anchor=>{
 
 
-document.body.style.opacity="1";
+anchor.addEventListener(
+"click",
+function(e){
+
+
+const target =
+document.querySelector(
+this.getAttribute("href")
+);
+
+
+
+if(target){
+
+
+e.preventDefault();
+
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+
+}
 
 
 });
 
+
+});
