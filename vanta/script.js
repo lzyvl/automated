@@ -432,6 +432,31 @@ DEMO CONTENT
 function getDemo(type){
 
 
+if(type === "harrison"){
+
+return harrisonDemo;
+
+}
+
+
+
+if(type === "amelia"){
+
+return ameliaDemo;
+
+}
+
+
+
+if(type === "primeflow"){
+
+return primeflowDemo;
+
+}
+
+
+}
+
 
 if(type==="harrison"){
 
