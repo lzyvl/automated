@@ -1,11 +1,20 @@
+/* =========================
+AMELIA ROSE STUDIO
+BEAUTY & AESTHETICS DEMO
+========================= */
+
+
 const ameliaDemo = `
 
 
-<div class="demo-page amelia">
+<div class="demo-page amelia-demo">
 
 
 
-<section class="demo-hero">
+<section class="amelia-hero">
+
+
+<div>
 
 
 <p class="demo-tag">
@@ -19,6 +28,7 @@ Amelia Rose Studio
 </h1>
 
 
+
 <p>
 Luxury treatments designed around you.
 </p>
@@ -26,11 +36,16 @@ Luxury treatments designed around you.
 
 
 <button>
-Book Treatment
+Book Your Treatment
 </button>
 
 
+</div>
+
+
 </section>
+
+
 
 
 
@@ -47,7 +62,9 @@ Our Treatments
 
 
 
+
 <div class="demo-services">
+
 
 
 <div>
@@ -56,11 +73,16 @@ Our Treatments
 Facials
 </h3>
 
+
 <p>
-Premium skincare treatments.
+Advanced skincare treatments for glowing results.
 </p>
 
+
 </div>
+
+
+
 
 
 
@@ -70,11 +92,15 @@ Premium skincare treatments.
 Aesthetics
 </h3>
 
+
 <p>
-Natural beauty enhancements.
+Enhancing your natural beauty with confidence.
 </p>
 
+
 </div>
+
+
 
 
 
@@ -82,12 +108,14 @@ Natural beauty enhancements.
 <div>
 
 <h3>
-Nails
+Nails & Beauty
 </h3>
 
+
 <p>
-Luxury finishes and designs.
+Luxury finishes and personalised designs.
 </p>
+
 
 </div>
 
@@ -105,15 +133,66 @@ Luxury finishes and designs.
 
 
 
-<section class="demo-image">
+
+
+<section class="amelia-feature">
+
+
+<div>
 
 
 <h2>
-Your Beauty Journey Starts Here
+Feel Beautiful.
+Feel Confident.
 </h2>
 
 
+
+<p>
+
+A premium beauty experience focused on
+quality, care and attention to detail.
+
+</p>
+
+
+</div>
+
+
 </section>
+
+
+
+
+
+
+
+
+
+<section class="amelia-gallery">
+
+
+
+<div class="beauty-card">
+
+</div>
+
+
+<div class="beauty-card">
+
+</div>
+
+
+
+<div class="beauty-card">
+
+</div>
+
+
+
+</section>
+
+
 
 
 
@@ -129,15 +208,6 @@ Client Love
 </h2>
 
 
-<div class="review">
-
-★★★★★
-
-<br>
-
-"Absolutely amazing experience."
-
-</div>
 
 
 
@@ -145,11 +215,28 @@ Client Love
 
 ★★★★★
 
-<br>
+<br><br>
 
-"My new favourite studio."
+"The most relaxing beauty experience.
+Absolutely amazing."
 
 </div>
+
+
+
+
+
+
+<div class="review">
+
+★★★★★
+
+<br><br>
+
+"Professional, friendly and beautiful results."
+
+</div>
+
 
 
 
@@ -161,16 +248,25 @@ Client Love
 
 
 
-<section class="demo-contact">
+
+
+<section class="amelia-booking">
 
 
 <h2>
-Book Your Appointment
+Ready To Glow?
 </h2>
 
 
+
+<p>
+Book your appointment today.
+</p>
+
+
+
 <button>
-Reserve Now
+Reserve Appointment
 </button>
 
 
@@ -178,8 +274,9 @@ Reserve Now
 
 
 
-</div>
 
+
+</div>
 
 
 `;
